@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "transform": [
+    {
+      "filter": "datum.condition_state == 1 || datum.condition == 'average'"
+    },
+    {
+      "calculate": "datum.name + ';' + format(datum.event_percentage, '.1%') + ' (CI: ' + format(datum.event_low, '.1%') + ' - ' + format(datum.event_high, '.1%') + ')'",
+      "as": "name_long"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar"
+      },
+      "encoding": {
+        "y": {
+          "field": "name_long",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "style": "bar.axisYDiscrete",
+            "labelColor": {
+              "condition": {
+                "test": "indexof(datum.value, 'General Population') == 0",
+                "value": "#637381"
+              },
+              "value": "#ffffff"
+            }
+          },
+          "sort": {
+            "field": "order"
+          }
+        },
+        "x": {
+          "field": "event_percentage",
+          "type": "quantitative",
+          "axis": {
+            "format": "%"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.condition == 'average'",
+            "value": "#CDD6E0"
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.condition === 'average'"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#CDD6E0"
+      },
+      "encoding": {
+        "x": {
+          "field": "event_percentage",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "errorbar",
+        "thickness": 3,
+        "ticks": {
+          "cornerRadius": 2,
+          "height": {
+            "expr": "bandwidth('y') * 0.45"
+          }
+        },
+        "color": "#5068DA"
+      },
+      "encoding": {
+        "y": {
+          "field": "name_long",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "x": {
+          "field": "event_low",
+          "type": "quantitative",
+          "axis": {
+            "title": "",
+            "format": "%"
+          }
+        },
+        "x2": { "field": "event_high" }
+      }
+    }
+  ]
+}

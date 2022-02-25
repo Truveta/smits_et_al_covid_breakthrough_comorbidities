@@ -1,0 +1,115 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "layer": [],
+  "width": 700,
+  "height": 700,
+  "padding": {
+    "top": 105,
+    "left": 40,
+    "bottom": 115,
+    "right": 40
+  },
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "config": {
+    "font": "Open Sans",
+    "lineBreak": ";",
+    "style": {
+      "bar.axisYDiscrete": {
+        "labelLimit": 300,
+        "labelAlign": "left",
+        "labelFontSize": 14,
+        "labelPadding": -13,
+        "labelColor": "#ffffff",
+        "labelOffset": {
+          "expr": "indexof(datum.value, ';') >= 0 ? -7 : 0"
+        }
+      },
+      "bar.axisYDiscrete2": {
+        "labelLimit": 300,
+        "labelAlign": "left",
+        "labelFontSize": 14,
+        "labelPadding": 190,
+        "labelOffset": {
+          "expr": "indexof(datum.value, ';') >= 0 ? -7 : 0"
+        }
+      },
+      "odds.axisYDiscrete": {
+        "labelLimit": 250,
+        "labelAlign": "left",
+        "labelPadding": 180,
+        "labelOffset": {
+          "expr": "indexof(datum.value, ';') >= 0 ? -9 : 0"
+        }
+      }
+    },
+    "mark": {
+      "color": "#2BB1A7",
+      "opacity": 1
+    },
+    "text": {
+      "fontWeight": "bold",
+      "color": "#637381",
+      "fontSize": 18
+    },
+    "square": {
+      "filled": true,
+      "size": 256,
+      "color": "#2BB1A7",
+      "opacity": 1
+    },
+    "bar": {
+      "color": "#2BB1A7"
+    },
+    "rule": {
+      "color": "#CDD6E0",
+      "strokeWidth": 4
+    },
+    "view": {
+      "stroke": null
+    },
+    "axisQuantitative": {
+      "grid": true
+    },
+    "title": {
+      "align": "left",
+      "anchor": "start",
+      "color": "#5068DA",
+      "fontStyle": "bold",
+      "lineHeight": 30,
+      "fontSize": 20,
+      "dx": 0,
+      "offset": 0,
+      "dy": -20
+    },
+    "axis": {
+      "titleFontWeight": "normal",
+      "titleColor": "#919EAB",
+      "labelColor": "#919EAB",
+      "labelFontWeight": "bold",
+      "labelFontSize": 16,
+      "labelLineHeight": 18,
+      "titleFontSize": 18,
+      "titleLimit": 0,
+      "ticks": false,
+      "domain": false
+    },
+    "axisYDiscrete": {
+      "zindex": 1,
+      "title": null
+    },
+    "axisX": {
+      "titleAlign": "right",
+      "titleAnchor": "end",
+      "labelPadding": 20,
+      "titlePadding": 30
+    },
+    "axisXQuantitative": {
+      "gridOpacity": 0.24,
+      "gridColor": "#919EAB",
+      "gridDash": [4, 2]
+    }
+  }
+}

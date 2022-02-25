@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "transform": [
+    {
+      "calculate": "datum.split + ';' + format(datum.estimate, '.1f') + ' (CI: ' + format(datum['conf.low'], '.1f') + ' - ' + format(datum['conf.high'], '.1f') + ')'",
+      "as": "split_long"
+    }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "rule" },
+      "encoding": { "x": { "datum": 1 } }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "text": "General Population",
+        "height": 100,
+        "y": -20
+      },
+      "encoding": { "x": { "datum": 1 } }
+    },
+    {
+      "encoding": {
+        "y": {
+          "field": "split_long",
+          "type": "ordinal",
+          "axis": {
+            "style": "odds.axisYDiscrete"
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": { "type": "errorbar", "color": "#2BB1A7", "thickness": 4 },
+          "encoding": {
+            "x": {
+              "field": "conf.low",
+              "scale": { "zero": false },
+              "type": "quantitative",
+              "title": "odds ratio"
+            },
+            "x2": { "field": "conf.high" }
+          }
+        },
+        {
+          "mark": {
+            "type": "square"
+          },
+          "encoding": {
+            "x": { "field": "estimate", "type": "quantitative" }
+          }
+        }
+      ]
+    }
+  ],
+  "padding": {
+    "top": 130,
+    "left": 200,
+    "bottom": 115,
+    "right": 40
+  }
+}

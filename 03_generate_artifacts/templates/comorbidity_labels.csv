@@ -1,0 +1,7 @@
+term,name,split,order
+cancer,Cancer,Cancer,1
+ckd_diagnosis,Chronic Kidney Disease,Chronic Kidney;Disease,2
+chronic_pulmonary_disease,Chronic Lung Disease,Chronic Lung;Disease,3
+diabetes,Diabetes,Diabetes,4
+immunocompromised,Immunocompromised,Immuno-;compromised,5
+average,General Population,General Population,0

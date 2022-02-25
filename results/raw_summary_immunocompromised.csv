@@ -1,0 +1,21 @@
+population,feature,level,count,percentage
+total,sample_size,NA,159906,100
+COVID breakthrough,sample_size,NA,2933,1.834202594023989
+Hospitalized,sample_size,NA,468,0.29267194476755093
+total,age_bracket,<18,351,0.2195039585756632
+total,age_bracket,18-49,18996,11.87947919402649
+total,age_bracket,50-64,42470,26.559353620251898
+total,age_bracket,65-74,50656,31.678611184070643
+total,age_bracket,75+,47433,29.663052043075304
+total,sex,Female,94077,58.832689204907886
+total,sex,Male,65794,41.145422935974885
+total,sex,Other,35,0.021887859117231373
+total,race,White,133175,83.28330394106538
+total,race,Other,12774,7.9884432103861025
+total,race,Asian,8448,5.283103823496304
+total,race,Black or African American,3837,2.399534726651908
+total,race,American Indian or Alaska Native,1101,0.6885295110877641
+total,race,Native Hawaiian or Other Pacific Islander,571,0.3570847873125461
+total,ethnicity,Not Hispanic or Latino,146420,91.56629519842909
+total,ethnicity,Hispanic or Latino,8085,5.056095456080447
+total,ethnicity,Other,5401,3.377609345490476
