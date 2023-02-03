@@ -1,0 +1,263 @@
+// helpers
+conditioncategory_billing_or_encounter = 
+  codeset("Truveta", SelfAndDescendants,
+    "1065169",
+    "1065170"
+  )
+encounterclass_inpatient = 
+  codeset("Truveta", SelfAndDescendants,
+    "1065220",
+    "1065225"
+  )
+labvalue_positive = 
+  codeset("Truveta", SelfAndDescendants, 
+    "1065667",
+    "1065692"
+  )
+
+// fully vaccinated
+// fullyImmunizedForCovid19WithNovavaxVaccineEvents = import "https://library.truveta.com/o/truveta-research/d/fully-immunized-for-covid-19-with-novavax-vaccine"
+
+//pfizer
+// fullyImmunizedForCovid19WithPfizerVaccineEvents = import "https://library.truveta.com/o/truveta-research/d/fully-immunized-for-covid-19-with-pfizer-vaccine"
+pVaccinationCodes = 
+  codeset("CVX", Self, 
+    "208", 
+    "217", 
+    "218", 
+    "219", 
+    "300", 
+    "301"
+  )
+
+pVaccination = filter(Patient.ImmunizationSet i) {
+  i.CodeConceptId in (pVaccinationCodes, any) and
+  i.StatusConceptId in codeset("Truveta", SelfAndDescendants, "1065492")
+}
+
+ // pfizer 18+
+immunization_pfizer = sequence(pVaccination v1, pVaccination v2, Patient.PersonSet p) {
+  v1.AdministeredDateTime >= p.BirthDateTime + 18 years and
+  v2.AdministeredDateTime > v1.AdministeredDateTime + 3 weeks and 
+  v2.AdministeredDateTime <= v1.AdministeredDateTime + 8 weeks
+} output {
+  EffectiveDateTime = v2.AdministeredDateTime + 2 weeks
+}
+
+// moderna
+// fullyImmunizedForCovid19WithModernaVaccineEvents = import "https://library.truveta.com/o/truveta-research/d/fully-immunized-for-covid-19-with-moderna-vaccine"
+mVaccinationCodes = 
+  codeset("CVX", Self, 
+    "207", 
+    "221", 
+    "228", 
+    "229"
+  )
+
+mVaccination = filter(Patient.ImmunizationSet i) {
+  i.CodeConceptId in (mVaccinationCodes, any) and
+  i.StatusConceptId in codeset("Truveta", SelfAndDescendants, "1065492")
+}
+
+ // moderna 18+
+immunization_moderna = sequence(mVaccination v1, mVaccination v2, Patient.PersonSet p) {
+  v1.AdministeredDateTime >= p.BirthDateTime + 18 years and
+  v2.AdministeredDateTime > v1.AdministeredDateTime + 4 weeks and 
+  v2.AdministeredDateTime <= v1.AdministeredDateTime + 8 weeks
+} output {
+  EffectiveDateTime = v2.AdministeredDateTime + 2 weeks
+}
+
+// exclude janssen vaccine
+jVaccinationCodes = 
+  codeset("CVX", Self, 
+    "212"
+  )
+// excluded in population statement
+jVaccination = filter(Patient.ImmunizationSet i) {
+  i.CodeConceptId in (jVaccinationCodes, any) and
+  i.StatusConceptId in codeset("Truveta", SelfAndDescendants, "1065492")
+}
+
+// only the first version of this event
+covid_vaccine_temp = union(immunization_pfizer, immunization_moderna)
+covid_vaccine = filter(covid_vaccine_temp c) {
+    OrdinalFromStart(c) == 0
+}
+
+//////////////////
+// covid infection
+lab_covid_ag_or_pcr = codeset("Truveta", SelfAndDescendants, 
+    "863821",
+    "863822",
+    "863823",
+    "863824",
+    "863829",
+    "863830",
+    "863831",
+    "864002",
+    "864031",
+    "864033",
+    "864034",
+    "864047",
+    "864058",
+    "864059",
+    "864062",
+    "864063",
+    "864064",
+    "864065",
+    "864697",
+    "446918",
+    "446919",
+    "446920",
+    "446921",
+    "446922",
+    "446923",
+    "446925",
+    "459322",
+    "2505754",
+    "2505756",
+    "2506105",
+    "864009",
+    "864010",
+    "864139",
+    "864140",
+    "864141",
+    "864160",
+    "864255",
+    "864256",
+    "864258",
+    "864259",
+    "864260",
+    "864261",
+    "864262",
+    "864265",
+    "864266",
+    "864267",
+    "864321",
+    "864344",
+    "864613",
+    "864891",
+    "864894",
+    "864896",
+    "864901",
+    "864911",
+    "864912",
+    "865026",
+    "865092",
+    "865093",
+    "865307",
+    "865308",
+    "865309",
+    "865454",
+    "865455",
+    "865575",
+    "865601",
+    "865602",
+    "865603",
+    "865604",
+    "865605",
+    "865915",
+    "866064",
+    "1215488",
+    "1215550",
+    "1215551",
+    "1215883",
+    "1215884",
+    "1215893",
+    "1215897",
+    "1215899",
+    "1215901",
+    "1215902",
+    "1215911",
+    "1215912",
+    "1215913",
+    "1215914",
+    "1215915"
+)
+
+condition_covid = codeset("Truveta", SelfAndDescendants, 
+  "518399", 
+  "601204", 
+  "1205325", 
+  "445227", 
+  "446706", 
+  "446707", 
+  "446708",
+  "446709", 
+  "451542", 
+  "451544", 
+  "451546", 
+  "451553", 
+  "459323", 
+  "514734", 
+  "516325", 
+  "1201278", 
+  "1201630"
+)
+
+// covid diagnosis
+covid_diagnosis = sequence(Patient.ConditionSet c) {
+    c.CodeConceptId in (condition_covid, any) and 
+    c.CategoryConceptId in conditioncategory_billing_or_encounter
+} output {
+    RecordedDateTime = c.RecordedDateTime,
+    CodeId = c.CodeConceptId,
+    Type = "diagnosis"
+}
+
+// covid lab
+covid_positive_lab = sequence(Patient.LabResultSet l) {
+    l.CodeConceptId in (lab_covid_ag_or_pcr, any) and 
+    (l.NormalizedValueConceptId in labvalue_positive or l.InterpretationConceptId in labvalue_positive)
+} output {
+    RecordedDateTime = l.RecordedDateTime,
+    CodeId = l.CodeConceptId,
+    Type = "lab"
+}
+
+// merge both
+covid_positive = union(covid_diagnosis, covid_positive_lab)
+
+// no positive covid before T0
+positive_covid_before_vaccine = sequence(covid_vaccine v, covid_positive c) {
+    c.RecordedDateTime < v.EffectiveDateTime
+}
+
+// make sure vaccinated before covid
+// positive covid happened between 2020-03 and 2020-06
+// positive covid happened between 2020-03 and 2020-06
+matching_covid_vaccine = filter(covid_vaccine v) {
+    v.EffectiveDateTime >= @2020-12 and
+    v.EffectiveDateTime <= @2022-03
+}
+
+// fast and cheap way to compute first last encounter
+first_last_encounter = filter(Patient.EncounterSet e) {
+    OrdinalFromStart(e) == 0 or OrdinalFromEnd(e) == 0
+}
+
+// month-year of matching_covid_vaccine
+t0_2020_12 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2020-12 }
+t0_2021_01 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-01 }
+t0_2021_02 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-02 }
+t0_2021_03 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-03 }
+t0_2021_04 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-04 }
+t0_2021_05 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-05 }
+t0_2021_06 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-06 }
+t0_2021_07 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-07 }
+t0_2021_08 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-08 }
+t0_2021_09 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-09 }
+t0_2021_10 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-10 }
+t0_2021_11 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-11 }
+t0_2021_12 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2021-12 }
+t0_2022_01 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2022-01 }
+t0_2022_02 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2022-02 }
+t0_2022_03 = filter(matching_covid_vaccine t) { t.EffectiveDateTime == @2022-03 }
+
+population 
+  matching_covid_vaccine and 
+  positive_covid_before_vaccine == 0 and 
+  (pVaccination == 0 OR mVaccination == 0) and jVaccination == 0
+
+return matching_covid_vaccine, covid_vaccine, covid_positive, first_last_encounter, t0_2020_12, t0_2021_01, t0_2021_02, t0_2021_03, t0_2021_04, t0_2021_05, t0_2021_06, t0_2021_07, t0_2021_08, t0_2021_09, t0_2021_10, t0_2021_11, t0_2021_12, t0_2022_01, t0_2022_02, t0_2022_03

@@ -1,0 +1,5 @@
+Model complexity,AIC,delta_AIC,AICc,delta_AICc
+Four-way,17752.96,3.63,17753.28,3.78
+Three-way,17751.35,2.02,17751.65,2.15
+Two-way,17759.26,9.94,17759.52,10.01
+Base,17749.33,0,17749.51,0

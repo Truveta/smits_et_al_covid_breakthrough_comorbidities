@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='576.00pt' viewBox='0 0 576.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='576.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNjcuMDl8NTcwLjUyfDI1Ljk1fDQ5OS40MA=='>
+    <rect x='67.09' y='25.95' width='503.43' height='473.45' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjcuMDl8NTcwLjUyfDI1Ljk1fDQ5OS40MA==)'>
+<polyline points='67.09,432.90 570.52,432.90 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,342.94 570.52,342.94 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,252.99 570.52,252.99 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,163.03 570.52,163.03 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,73.08 570.52,73.08 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,477.88 570.52,477.88 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,387.92 570.52,387.92 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,297.97 570.52,297.97 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,208.01 570.52,208.01 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,118.06 570.52,118.06 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='67.09,28.10 570.52,28.10 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='204.39,499.40 204.39,25.95 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='433.22,499.40 433.22,25.95 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<rect x='101.41' y='469.80' width='205.95' height='8.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #2F7170;' />
+<rect x='330.24' y='47.47' width='205.95' height='430.41' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #2F7170;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
+<text x='62.15' y='481.37' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='6.10px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='62.15' y='391.42' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='36.59px' lengthAdjust='spacingAndGlyphs'>250000</text>
+<text x='62.15' y='301.46' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='36.59px' lengthAdjust='spacingAndGlyphs'>500000</text>
+<text x='62.15' y='211.51' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='36.59px' lengthAdjust='spacingAndGlyphs'>750000</text>
+<text x='62.15' y='121.55' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='42.69px' lengthAdjust='spacingAndGlyphs'>1000000</text>
+<text x='62.15' y='31.60' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='42.69px' lengthAdjust='spacingAndGlyphs'>1250000</text>
+<text transform='translate(209.33,509.27) rotate(-45)' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='64.84px' lengthAdjust='spacingAndGlyphs'>breakthrough</text>
+<text transform='translate(438.16,509.27) rotate(-45)' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='45.84px' lengthAdjust='spacingAndGlyphs'>no COVID</text>
+<text x='570.52' y='568.02' text-anchor='end' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='68.43px' lengthAdjust='spacingAndGlyphs'>covid_state</text>
+<text transform='translate(14.23,262.67) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='33.88px' lengthAdjust='spacingAndGlyphs'>count</text>
+<text x='67.09' y='17.14' style='font-size: 16.00px;fill: #3237B4; font-family: "Liberation Sans";' textLength='301.01px' lengthAdjust='spacingAndGlyphs'>COVID within 180 days of vaccination</text>
+</g>
+</svg>

@@ -1,0 +1,60 @@
+CodeSystem,ConceptCode,ConceptName
+SNOMED CT,840539006,COVID-19
+SNOMED CT,870588003,Sepsis due to disease caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,870589006,Acute kidney injury due to COVID-19
+SNOMED CT,870590002,Acute hypoxemic respiratory failure due to COVID-19
+SNOMED CT,870591003,Rhabdomyolysis due to COVID-19
+SNOMED CT,119731000146105,Cardiomyopathy due to disease caused by Severe acute respiratory syndrome coronavirus 2
+SNOMED CT,119741000146102,Conjunctivitis due to disease caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,119751000146104,Fever caused by Severe acute respiratory syndrome coronavirus 2
+SNOMED CT,119981000146107,Dyspnea caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,1240521000000100,Otitis media due to disease caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,441590008,Pneumonia caused by Severe acute respiratory syndrome coronavirus
+SNOMED CT,840544004,Suspected disease caused by Severe acute respiratory coronavirus 2
+ICD10CM,B97.29,Other coronavirus as the cause of diseases classified elsewhere
+ICD10CM,U07.1,Emergency use of U07.1 | COVID-19
+SNOMED CT,1017214008,SARS-CoV-2 viremia
+SNOMED CT,1119302008,Acute disease caused by severe acute respiratory syndrome coronavirus 2
+ICD10CM,Z86.16,Personal history of COVID-19
+SNOMED CT,866151004,Lymphocytopenia due to Severe acute respiratory syndrome coronavirus 2
+SNOMED CT,866152006,Thrombocytopenia due to severe acute respiratory syndrome coronavirus 2
+SNOMED CT,1240531000000103,Myocarditis due to disease caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,1240541000000107,Infection of upper respiratory tract caused by Severe acute respiratory syndrome coronavirus 2
+SNOMED CT,1240561000000108,Encephalopathy due to disease caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,138389411000119105,Acute bronchitis caused by severe acute respiratory syndrome coronavirus 2
+SNOMED CT,189486241000119100,Asymptomatic severe acute respiratory syndrome coronavirus 2 infection
+SNOMED CT,674814021000119106,Acute respiratory distress syndrome due to COVID-19
+SNOMED CT,880529761000119102,Infection of lower respiratory tract caused by SARS-CoV-2
+SNOMED CT,882784691000119100,Pneumonia caused by severe acute respiratory syndrome coronavirus 2
+Truveta,1215922,Acute cardiac injury due to COVID-19
+Truveta,1215923,Acute respiratory disease due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215924,Acute respiratory failure due to COVID-19
+Truveta,1215925,Bronchitis due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215926,Cerebrovascular accident (CVA) associated with severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection
+Truveta,1215928,COVID-19 toes
+Truveta,1215929,COVID-19 affecting childbirth
+Truveta,1215930,COVID-19 affecting pregnancy in first trimester
+Truveta,1215931,COVID-19 affecting pregnancy in second trimester
+Truveta,1215932,COVID-19 affecting pregnancy in third trimester
+Truveta,1215933,"COVID-19 affecting pregnancy, antepartum"
+Truveta,1215934,COVID-19 affecting puerperium
+Truveta,1215935,COVID-19 in immunocompromised patient
+Truveta,1215937,COVID-19 with cardiovascular comorbidity
+Truveta,1215938,COVID-19 with comorbid diabetes mellitus
+Truveta,1215939,COVID-19 with multiple comorbid conditions
+Truveta,1215940,COVID-19 with pulmonary comorbidity
+Truveta,1215941,Deep vein thrombosis (DVT) associated with COVID-19
+Truveta,1215942,Diarrhea due to COVID-19
+Truveta,1215944,Gastroenteritis due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215945,Hypercoagulable state associated with COVID-19
+Truveta,1215946,Kawasaki-like syndrome associated with COVID-19
+Truveta,1215947,Multisystem inflammatory syndrome in adult (MIS-A) associated with COVID-19
+Truveta,1215948,Multisystem inflammatory syndrome in child (MIS-C) associated with COVID-19
+Truveta,1215949,Otitis media of both ears due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215950,Otitis media of left ear due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215951,Otitis media of right ear due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+Truveta,1215969,Post-COVID-19 syndrome
+Truveta,1215970,Pulmonary embolism associated with COVID-19
+Truveta,1215971,Rash associated with COVID-19
+Truveta,1215974,Respiratory tract infection due to severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+SNOMED CT,1217296006,SARS-CoV-2 breakthrough infection

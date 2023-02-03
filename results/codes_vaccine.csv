@@ -1,0 +1,11 @@
+CodeSystem,ConceptCode,ConceptName,Manufacturer
+CVX,208,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose",Pfizer
+CVX,217,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3 mL dose, tris-sucrose formulation",Pfizer
+CVX,218,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 10 mcg/0.2 mL dose, tris-sucrose formulation",Pfizer
+CVX,219,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 3 mcg/0.2 mL dose, tris-sucrose formulation",Pfizer
+CVX,300,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 30 mcg/0.3mL dose, tris-sucrose formulation",Pfizer
+CVX,301,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 10 mcg/0.2 mL dose, tris-sucrose formulation",Pfizer
+CVX,207,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose",Moderna
+CVX,221,"COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL dose",Moderna
+CVX,228,"COVID-19, mRNA, LNP-S, PF, pediatric 25 mcg/0.25 mL dose",Moderna
+CVX,229,"SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, bivalent booster, preservative free, 50 mcg/0.5 mL or 25mcg/0.25mL dose",Moderna

@@ -1,0 +1,43 @@
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{lrrrrrr}
+  \hline
+term & estimate & std.error & statistic & p.value & conf.low & conf.high \\ 
+  \hline
+(Intercept) & 0.04 & 0.28 & -11.21 & 0.00 & 0.02 & 0.07 \\ 
+  ns(age\_years, df = 5)1 & 0.76 & 0.15 & -1.92 & 0.06 & 0.57 & 1.01 \\ 
+  ns(age\_years, df = 5)2 & 2.20 & 0.17 & 4.75 & 0.00 & 1.59 & 3.05 \\ 
+  ns(age\_years, df = 5)3 & 1.85 & 0.13 & 4.75 & 0.00 & 1.44 & 2.39 \\ 
+  ns(age\_years, df = 5)4 & 26.03 & 0.33 & 10.01 & 0.00 & 13.88 & 49.74 \\ 
+  ns(age\_years, df = 5)5 & 13.29 & 0.18 & 14.65 & 0.00 & 9.41 & 18.81 \\ 
+  ckd & 2.36 & 0.06 & 14.69 & 0.00 & 2.10 & 2.65 \\ 
+  diabetes & 1.66 & 0.05 & 10.32 & 0.00 & 1.51 & 1.83 \\ 
+  immunocompromised & 1.78 & 0.05 & 12.69 & 0.00 & 1.63 & 1.95 \\ 
+  lung & 1.79 & 0.04 & 13.05 & 0.00 & 1.64 & 1.95 \\ 
+  raceUnknown & 1.16 & 0.08 & 1.93 & 0.05 & 1.00 & 1.35 \\ 
+  raceBlack or African American & 1.08 & 0.06 & 1.18 & 0.24 & 0.95 & 1.22 \\ 
+  raceAsian & 1.07 & 0.12 & 0.57 & 0.57 & 0.85 & 1.33 \\ 
+  raceAmerican Indian or Alaska Native & 1.72 & 0.25 & 2.22 & 0.03 & 1.04 & 2.74 \\ 
+  raceNative Hawaiian or Other Pacific Islander & 0.59 & 0.48 & -1.12 & 0.26 & 0.20 & 1.35 \\ 
+  ethnicityHispanic or Latino & 1.18 & 0.07 & 2.37 & 0.02 & 1.03 & 1.35 \\ 
+  ethnicityUnknown & 0.55 & 0.14 & -4.29 & 0.00 & 0.41 & 0.72 \\ 
+  sexMale & 1.04 & 0.04 & 1.03 & 0.30 & 0.96 & 1.13 \\ 
+  month\_year2021-02-01 & 1.18 & 0.26 & 0.65 & 0.52 & 0.73 & 2.02 \\ 
+  month\_year2021-03-01 & 0.86 & 0.25 & -0.59 & 0.55 & 0.54 & 1.45 \\ 
+  month\_year2021-04-01 & 0.91 & 0.25 & -0.37 & 0.71 & 0.57 & 1.54 \\ 
+  month\_year2021-05-01 & 0.94 & 0.25 & -0.23 & 0.82 & 0.59 & 1.59 \\ 
+  month\_year2021-06-01 & 1.18 & 0.26 & 0.66 & 0.51 & 0.73 & 2.02 \\ 
+  month\_year2021-07-01 & 1.00 & 0.26 & 0.01 & 0.99 & 0.61 & 1.72 \\ 
+  month\_year2021-08-01 & 1.02 & 0.26 & 0.08 & 0.94 & 0.62 & 1.76 \\ 
+  month\_year2021-09-01 & 1.01 & 0.25 & 0.02 & 0.98 & 0.63 & 1.71 \\ 
+  month\_year2021-10-01 & 1.23 & 0.26 & 0.82 & 0.41 & 0.77 & 2.09 \\ 
+  month\_year2021-11-01 & 1.25 & 0.27 & 0.85 & 0.40 & 0.76 & 2.17 \\ 
+  month\_year2021-12-01 & 1.16 & 0.28 & 0.52 & 0.60 & 0.68 & 2.07 \\ 
+  month\_year2022-01-01 & 1.08 & 0.31 & 0.25 & 0.80 & 0.60 & 2.01 \\ 
+  month\_year2022-02-01 & 1.08 & 0.35 & 0.21 & 0.83 & 0.54 & 2.14 \\ 
+  month\_year2022-03-01 & 1.03 & 0.35 & 0.08 & 0.94 & 0.52 & 2.05 \\ 
+   \hline
+\end{tabular}
+\caption{Summary of the selected logistic regression model of hospitalization following breakthrough infection showing estimates for all of the regression coefficients. Estimates are on the odds scale (i.e. exponentiated).} 
+\label{tab:summary_logistic_hospital}
+\end{table}

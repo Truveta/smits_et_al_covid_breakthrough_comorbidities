@@ -1,0 +1,101 @@
+condition_covid = ${{ condition_covid|tocodeset }}
+conditioncategory_billing_or_encounter = ${{ conditioncategory_billing_or_encounter|tocodeset }}
+encounterclass_inpatient = ${{ encounterclass_inpatient|tocodeset }}
+immunization_covid = ${{ immunization_covid|tocodeset }}
+immunizationstatus_completed = ${{ immunizationstatus_completed|tocodeset }}
+lab_covid = ${{ lab_covid|tocodeset }}
+labvalue_positive = ${{ labvalue_positive|tocodeset }}
+medrequest_not_draft_cancelled_error = ${{ medrequest_not_draft_cancelled_error|tocodeset }}
+observationstatus_not_cancelled_error = ${{ observationstatus_not_cancelled_error|tocodeset }}
+
+
+conditions = filter(Patient.ConditionSet c) {
+  c.CodeConceptId in (condition_covid, ANY) AND c.CategoryConceptId in conditioncategory_billing_or_encounter
+}
+
+immunizations = filter(Patient.ImmunizationSet i) {
+    i.CodeConceptId in (immunization_covid, ANY) AND c.StatusConceptId in immunizationstatus_completed
+}
+
+labs = filter(Patient.LabResultSet l) {
+    l.CodeConceptId in (lab_covid, ANY) AND (l.NormalizedValueConceptId in labvalue_positive OR l.InterpretationConceptId in labvalue_positive)
+}
+
+encounters = filter(Patient.EncounterSet e) {
+    e.ClassConceptId in encounterclass_inpatient
+}
+
+condition_encounters = sequence(conditions c, encounters e) {
+  c.EncounterId == e.Id
+} output {
+  StartDateTime = e.StartDateTime,
+  ClassConceptId = e.ClassConceptId,
+  DischargeDispositionConceptId = e.DischargeDispositionConceptId,
+  EndDateTime = e.EndDateTime,
+  EncounterId = e.Id
+}
+
+// fast and cheap way to compute first last encounter
+first_last_encounter = filter(Patient.EncounterSet e) {
+    OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0
+}
+
+t0_all = filter(conditions e) {}
+// simplify events
+t0_simple = sequence(conditions e) {} output { RecordedDateTime = e.RecordedDateTime }
+// limit to first last since that is what we can access anyhow
+t0 = filter(t0_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+
+t0_2020_03_all = filter(t0_simple e) { e.RecordedDateTime == @2020-03 }
+t0_2020_03 = filter(t0_2020_03_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_04_all = filter(t0_simple e) { e.RecordedDateTime == @2020-04 }
+t0_2020_04 = filter(t0_2020_04_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_05_all = filter(t0_simple e) { e.RecordedDateTime == @2020-05 }
+t0_2020_05 = filter(t0_2020_05_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_06_all = filter(t0_simple e) { e.RecordedDateTime == @2020-06 }
+t0_2020_06 = filter(t0_2020_06_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_07_all = filter(t0_simple e) { e.RecordedDateTime == @2020-07 }
+t0_2020_07 = filter(t0_2020_07_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_08_all = filter(t0_simple e) { e.RecordedDateTime == @2020-08 }
+t0_2020_08 = filter(t0_2020_08_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_09_all = filter(t0_simple e) { e.RecordedDateTime == @2020-09 }
+t0_2020_09 = filter(t0_2020_09_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_10_all = filter(t0_simple e) { e.RecordedDateTime == @2020-10 }
+t0_2020_10 = filter(t0_2020_10_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_11_all = filter(t0_simple e) { e.RecordedDateTime == @2020-11 }
+t0_2020_11 = filter(t0_2020_11_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2020_12_all = filter(t0_simple e) { e.RecordedDateTime == @2020-12 }
+t0_2020_12 = filter(t0_2020_12_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_01_all = filter(t0_simple e) { e.RecordedDateTime == @2021-01 }
+t0_2021_01 = filter(t0_2021_01_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_02_all = filter(t0_simple e) { e.RecordedDateTime == @2021-02 }
+t0_2021_02 = filter(t0_2021_02_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_03_all = filter(t0_simple e) { e.RecordedDateTime == @2021-03 }
+t0_2021_03 = filter(t0_2021_03_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_04_all = filter(t0_simple e) { e.RecordedDateTime == @2021-04 }
+t0_2021_04 = filter(t0_2021_04_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_05_all = filter(t0_simple e) { e.RecordedDateTime == @2021-05 }
+t0_2021_05 = filter(t0_2021_05_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_06_all = filter(t0_simple e) { e.RecordedDateTime == @2021-06 }
+t0_2021_06 = filter(t0_2021_06_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_07_all = filter(t0_simple e) { e.RecordedDateTime == @2021-07 }
+t0_2021_07 = filter(t0_2021_07_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_08_all = filter(t0_simple e) { e.RecordedDateTime == @2021-08 }
+t0_2021_08 = filter(t0_2021_08_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_09_all = filter(t0_simple e) { e.RecordedDateTime == @2021-09 }
+t0_2021_09 = filter(t0_2021_09_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_10_all = filter(t0_simple e) { e.RecordedDateTime == @2021-10 }
+t0_2021_10 = filter(t0_2021_10_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_11_all = filter(t0_simple e) { e.RecordedDateTime == @2021-11 }
+t0_2021_11 = filter(t0_2021_11_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2021_12_all = filter(t0_simple e) { e.RecordedDateTime == @2021-12 }
+t0_2021_12 = filter(t0_2021_12_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2022_01_all = filter(t0_simple e) { e.RecordedDateTime == @2022-01 }
+t0_2022_01 = filter(t0_2022_01_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2022_02_all = filter(t0_simple e) { e.RecordedDateTime == @2022-02 }
+t0_2022_02 = filter(t0_2022_02_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+t0_2022_03_all = filter(t0_simple e) { e.RecordedDateTime == @2022-03 }
+t0_2022_03 = filter(t0_2022_03_all e) { OrdinalFromStart(e) == 0 OR OrdinalFromEnd(e) == 0 }
+
+population t0 > 0
+return t0, first_last_encounter, t0_2020_03, t0_2020_04, t0_2020_05, t0_2020_06, t0_2020_07, t0_2020_08, t0_2020_09, t0_2020_10, t0_2020_11, t0_2020_12, t0_2021_01, t0_2021_02, t0_2021_03, t0_2021_04, t0_2021_05, t0_2021_06, t0_2021_07, t0_2021_08, t0_2021_09, t0_2021_10, t0_2021_11, t0_2021_12, t0_2022_01, t0_2022_02, t0_2022_03

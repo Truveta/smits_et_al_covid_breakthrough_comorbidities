@@ -1,0 +1,150 @@
+ConceptId,CodeSystem,ConceptCode,ConceptName
+520764,ICD10CM,D63.1,Anemia in chronic kidney disease
+521049,ICD10CM,E08.22,Diabetes mellitus due to underlying condition with diabetic chronic kidney disease
+521166,ICD10CM,E09.22,Drug or chemical induced diabetes mellitus with diabetic chronic kidney disease
+521514,ICD10CM,E13.22,Other specified diabetes mellitus with diabetic chronic kidney disease
+528298,ICD10CM,I12,Hypertensive chronic kidney disease
+528299,ICD10CM,I12.0,Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease
+528300,ICD10CM,I12.9,"Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+528301,ICD10CM,I13,Hypertensive heart and chronic kidney disease
+528302,ICD10CM,I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+528303,ICD10CM,I13.1,Hypertensive heart and chronic kidney disease without heart failure
+528304,ICD10CM,I13.10,"Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+528305,ICD10CM,I13.11,"Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease"
+528306,ICD10CM,I13.2,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
+541187,ICD10CM,N18,Chronic kidney disease (CKD)
+542111,ICD10CM,O10.211,"Pre-existing hypertensive chronic kidney disease complicating pregnancy, first trimester"
+542112,ICD10CM,O10.212,"Pre-existing hypertensive chronic kidney disease complicating pregnancy, second trimester"
+542113,ICD10CM,O10.213,"Pre-existing hypertensive chronic kidney disease complicating pregnancy, third trimester"
+542114,ICD10CM,O10.219,"Pre-existing hypertensive chronic kidney disease complicating pregnancy, unspecified trimester"
+542115,ICD10CM,O10.22,Pre-existing hypertensive chronic kidney disease complicating childbirth
+542118,ICD10CM,O10.31,Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy
+542119,ICD10CM,O10.311,"Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, first trimester"
+542120,ICD10CM,O10.312,"Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, second trimester"
+542121,ICD10CM,O10.313,"Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, third trimester"
+542122,ICD10CM,O10.319,"Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, unspecified trimester"
+542123,ICD10CM,O10.32,Pre-existing hypertensive heart and chronic kidney disease complicating childbirth
+542124,ICD10CM,O10.33,Pre-existing hypertensive heart and chronic kidney disease complicating the puerperium
+545746,ICD10CM,Q61.2,"Polycystic kidney, adult type"
+545747,ICD10CM,Q61.3,"Polycystic kidney, unspecified"
+545750,ICD10CM,Q61.8,Other cystic kidney diseases
+613290,ICD10CM,Z94.0,Kidney transplant status
+541188,ICD10CM,N18.1,"Chronic kidney disease, stage 1"
+541189,ICD10CM,N18.2,"Chronic kidney disease, stage 2 (mild)"
+541190,ICD10CM,N18.3,"Chronic kidney disease, stage 3 (moderate)"
+541191,ICD10CM,N18.4,"Chronic kidney disease, stage 4 (severe)"
+541192,ICD10CM,N18.5,"Chronic kidney disease, stage 5"
+541193,ICD10CM,N18.6,End stage renal disease
+541194,ICD10CM,N18.9,"Chronic kidney disease, unspecified"
+1204944,ICD10CM,N18.30,"Chronic kidney disease, stage 3 unspecified"
+1204945,ICD10CM,N18.31,"Chronic kidney disease, stage 3a"
+1204946,ICD10CM,N18.32,"Chronic kidney disease, stage 3b"
+397796,SNOMED CT,709044004,Chronic kidney disease
+15692,SNOMED CT,16726004,Renal osteodystrophy
+43520,SNOMED CT,46177005,End-stage renal disease
+46826,SNOMED CT,49708008,Anemia of chronic renal failure
+54209,SNOMED CT,57557005,Chronic milk alkali syndrome
+85414,SNOMED CT,90688005,Chronic renal failure
+218560,SNOMED CT,236433006,Acute-on-chronic renal failure
+218561,SNOMED CT,236434000,End stage renal failure untreated by renal replacement therapy
+218562,SNOMED CT,236435004,End stage renal failure on dialysis
+218563,SNOMED CT,236436003,End stage renal failure with renal transplant
+218676,SNOMED CT,236552002,Adynamic bone disease
+357134,SNOMED CT,425369003,Chronic progressive renal failure
+363256,SNOMED CT,431855005,Chronic kidney disease stage 1
+363257,SNOMED CT,431856006,Chronic kidney disease stage 2
+363258,SNOMED CT,431857002,Chronic kidney disease stage 4
+364344,SNOMED CT,433144002,Chronic kidney disease stage 3
+364346,SNOMED CT,433146000,Chronic kidney disease stage 5
+389989,SNOMED CT,700378005,Chronic kidney disease stage 3A
+389990,SNOMED CT,700379002,Chronic kidney disease stage 3B
+394020,SNOMED CT,704667004,Hypertension concurrent and due to end stage renal disease on dialysis
+396149,SNOMED CT,707324008,Anemia in end stage renal disease
+397734,SNOMED CT,708975004,Mixed renal osteodystrophy
+400292,SNOMED CT,712487000,End stage renal disease due to benign hypertension
+401068,SNOMED CT,713313000,Chronic kidney disease mineral and bone disorder
+401887,SNOMED CT,714152005,Chronic kidney disease stage 5 on dialysis
+401888,SNOMED CT,714153000,Chronic kidney disease stage 5 with transplant
+408578,SNOMED CT,722098007,Chronic kidney disease following donor nephrectomy
+408621,SNOMED CT,722149000,Chronic kidney disease due to and following excision of neoplasm of kidney
+408622,SNOMED CT,722150000,Chronic kidney disease due to systemic infection
+408895,SNOMED CT,722467000,Chronic kidney disease due to traumatic loss of kidney
+409525,SNOMED CT,723190009,Chronic renal insufficiency
+433146,SNOMED CT,776416004,"Hyperuricemia, pulmonary hypertension, renal failure, alkalosis syndrome"
+447533,SNOMED CT,711000119100,Chronic kidney disease stage 5 due to type 2 diabetes mellitus
+447537,SNOMED CT,721000119107,Chronic kidney disease stage 4 due to type 2 diabetes mellitus
+447541,SNOMED CT,731000119105,Chronic kidney disease stage 3 due to type 2 diabetes mellitus
+447544,SNOMED CT,741000119101,Chronic kidney disease stage 2 due to type 2 diabetes mellitus
+447547,SNOMED CT,751000119104,Chronic kidney disease stage 1 due to type 2 diabetes mellitus
+447553,SNOMED CT,771000119108,Chronic kidney disease due to type 2 diabetes mellitus
+447935,SNOMED CT,1801000119106,"Anemia, pre-end stage renal disease on erythropoietin protocol"
+449353,SNOMED CT,8501000119104,Hypertensive heart and chronic kidney disease
+450760,SNOMED CT,71421000119105,Hypertension in chronic kidney disease due to type 2 diabetes mellitus
+450762,SNOMED CT,71701000119105,Hypertension in chronic kidney disease due to type 1 diabetes mellitus
+451012,SNOMED CT,90721000119101,Chronic kidney disease stage 1 due to type 1 diabetes mellitus
+451013,SNOMED CT,90731000119103,Chronic kidney disease stage 2 due to type 1 diabetes mellitus
+451014,SNOMED CT,90741000119107,Chronic kidney disease stage 3 due to type 1 diabetes mellitus
+451015,SNOMED CT,90751000119109,Chronic kidney disease stage 4 due to type 1 diabetes mellitus
+451016,SNOMED CT,90761000119106,Chronic kidney disease stage 5 due to type 1 diabetes mellitus
+451017,SNOMED CT,90771000119100,End stage renal disease on dialysis due to type 1 diabetes mellitus
+451019,SNOMED CT,90791000119104,End stage renal disease on dialysis due to type 2 diabetes mellitus
+451095,SNOMED CT,96441000119101,Chronic kidney disease due to type 1 diabetes mellitus
+451098,SNOMED CT,96701000119107,Hypertensive heart AND chronic kidney disease on dialysis
+451099,SNOMED CT,96711000119105,Hypertensive heart AND chronic kidney disease stage 5
+451100,SNOMED CT,96721000119103,Hypertensive heart AND chronic kidney disease stage 4
+451101,SNOMED CT,96731000119100,Hypertensive heart AND chronic kidney disease stage 3
+451102,SNOMED CT,96741000119109,Hypertensive heart AND chronic kidney disease stage 2
+451103,SNOMED CT,96751000119106,Hypertensive heart AND chronic kidney disease stage 1
+451249,SNOMED CT,104931000119100,Chronic kidney disease due to hypertension
+451370,SNOMED CT,111411000119103,End stage renal disease due to hypertension
+451502,SNOMED CT,117681000119102,Chronic kidney disease stage 1 due to hypertension
+451515,SNOMED CT,118781000119108,Pre-existing hypertensive chronic kidney disease in mother complicating pregnancy
+451559,SNOMED CT,120261000119101,Benign hypertensive heart disease and chronic renal disease stage 5
+451729,SNOMED CT,127991000119101,Hypertension concurrent and due to end stage renal disease on dialysis due to type 2 diabetes mellitus
+451730,SNOMED CT,128001000119105,Hypertension concurrent and due to end stage renal disease on dialysis due to type 1 diabetes mellitus
+451748,SNOMED CT,129151000119102,Chronic kidney disease stage 4 due to hypertension
+451749,SNOMED CT,129161000119100,Chronic kidney disease stage 5 due to hypertension
+451750,SNOMED CT,129171000119106,Chronic kidney disease stage 3 due to hypertension
+451751,SNOMED CT,129181000119109,Chronic kidney disease stage 2 due to hypertension
+452017,SNOMED CT,140101000119109,Hypertension in chronic kidney disease stage 5 due to type 2 diabetes mellitus
+452018,SNOMED CT,140111000119107,Hypertension in chronic kidney disease stage 4 due to type 2 diabetes mellitus
+452019,SNOMED CT,140121000119100,Hypertension in chronic kidney disease stage 3 due to type 2 diabetes mellitus
+452020,SNOMED CT,140131000119102,Hypertension in chronic kidney disease stage 2 due to type 2 diabetes mellitus
+452230,SNOMED CT,153851000119106,Malignant hypertensive chronic kidney disease stage 5
+452232,SNOMED CT,153891000119101,End stage renal disease on dialysis due to hypertension
+452332,SNOMED CT,284961000119106,Chronic kidney disease due to benign hypertension
+452333,SNOMED CT,284971000119100,Chronic kidney disease stage 1 due to benign hypertension
+452334,SNOMED CT,284981000119102,Chronic kidney disease stage 2 due to benign hypertension
+452335,SNOMED CT,284991000119104,Chronic kidney disease stage 3 due to benign hypertension
+452336,SNOMED CT,285001000119105,Chronic kidney disease stage 4 due to benign hypertension
+452337,SNOMED CT,285011000119108,Chronic kidney disease stage 5 due to benign hypertension
+452338,SNOMED CT,285041000119107,Benign hypertensive heart disease and chronic renal disease stage 1
+452339,SNOMED CT,285061000119106,Benign hypertensive heart disease and chronic renal disease stage 2
+452340,SNOMED CT,285081000119102,Benign hypertensive heart disease and chronic renal disease stage 3
+452341,SNOMED CT,285101000119109,Benign hypertensive heart disease and chronic renal disease stage 4
+452408,SNOMED CT,285831000119108,Malignant hypertensive chronic kidney disease
+452409,SNOMED CT,285841000119104,Malignant hypertensive end stage renal disease
+452410,SNOMED CT,285851000119102,Malignant hypertensive chronic kidney disease stage 1
+452411,SNOMED CT,285861000119100,Malignant hypertensive chronic kidney disease stage 2
+452412,SNOMED CT,285871000119106,Malignant hypertensive chronic kidney disease stage 3
+452413,SNOMED CT,285881000119109,Malignant hypertensive chronic kidney disease stage 4
+452414,SNOMED CT,285911000119109,Malignant hypertensive heart disease and chronic renal disease stage 3
+452415,SNOMED CT,285921000119102,Malignant hypertensive heart disease and chronic renal disease stage 4
+452443,SNOMED CT,286371000119107,Malignant hypertensive end stage renal disease on dialysis
+455330,SNOMED CT,434431000124103,Hypertensive end stage renal disease
+456649,SNOMED CT,449631000124102,Benign hypertensive heart disease and chronic renal disease
+458151,SNOMED CT,691421000119108,Anemia co-occurrent and due to chronic kidney disease stage 3
+459865,SNOMED CT,10757401000119104,Pre-existing hypertensive heart and chronic kidney disease in mother complicating childbirth
+459867,SNOMED CT,10757481000119107,Pre-existing hypertensive heart and chronic kidney disease in mother complicating pregnancy
+1202205,SNOMED CT,368421000119108,Chronic kidney disease stage 1 due to drug induced diabetes mellitus
+1202206,SNOMED CT,368431000119106,Chronic kidney disease stage 2 due to drug induced diabetes mellitus
+1202207,SNOMED CT,368441000119102,Chronic kidney disease stage 3 due to drug induced diabetes mellitus
+1202208,SNOMED CT,368451000119100,Chronic kidney disease stage 4 due to drug induced diabetes mellitus
+1202209,SNOMED CT,368461000119103,Chronic kidney disease stage 5 due to drug induced diabetes mellitus
+1202210,SNOMED CT,368471000119109,End stage renal disease on dialysis due to drug induced diabetes mellitus
+1204217,SNOMED CT,897308007,Chronic kidney disease with osteoporosis
+1204219,SNOMED CT,897310009,Renal osteodystrophy with high bone turnover
+1204220,SNOMED CT,897311008,Renal osteodystrophy with normal bone turnover
+1204221,SNOMED CT,897312001,Renal osteodystrophy with low bone turnover
+2931760,SNOMED CT,1217070004,Renal osteodystrophy due to hyperparathyroidism
+2931901,SNOMED CT,1208934006,Sagliker syndrome
